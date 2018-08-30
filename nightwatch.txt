@@ -1,0 +1,19 @@
+works: --env firefox
+Running:  default e2e tests
+INFO Request: POST /wd/hub/session
+ - data:  {"desiredCapabilities":{"browserName":"firefox","javascriptEnabled":true,"acceptSslCerts":true,"platform":"ANY","name":"Test"}}
+ - headers:  {"Content-Type":"application/json; charset=utf-8","Content-Length":127}
+
+
+does not work:
+Running:  default e2e tests
+INFO Request: POST /wd/hub/session
+ - data:  {"desiredCapabilities":{"browserName":"firefox","javascriptEnabled":true,"acceptSslCerts":true,"platform":"ANY","acceptInsecureCerts":true,"marionette":false,"name":"Test"}}
+ - headers:  {"Content-Type":"application/json; charset=utf-8","Content-Length":173}
+
+
+works: --env chrome
+Running:  default e2e tests
+INFO Request: POST /wd/hub/session
+ - data:  {"desiredCapabilities":{"browserName":"chrome","javascriptEnabled":true,"acceptSslCerts":true,"platform":"ANY","marionette":true,"name":"Test"}}
+ - headers:  {"Content-Type":"application/json; charset=utf-8","Content-Length":144}
