@@ -1,4 +1,6 @@
 works: --env firefox
+npm run test:e2e -- --url http://localhost:8080/ --env firefox
+
 Running:  default e2e tests
 INFO Request: POST /wd/hub/session
  - data:  {"desiredCapabilities":{"browserName":"firefox","javascriptEnabled":true,"acceptSslCerts":true,"platform":"ANY","name":"Test"}}
@@ -13,6 +15,7 @@ INFO Request: POST /wd/hub/session
 
 
 works: --env chrome
+npm run test:e2e -- --url http://localhost:8080/ --env chrome
 Running:  default e2e tests
 INFO Request: POST /wd/hub/session
  - data:  {"desiredCapabilities":{"browserName":"chrome","javascriptEnabled":true,"acceptSslCerts":true,"platform":"ANY","marionette":true,"name":"Test"}}
